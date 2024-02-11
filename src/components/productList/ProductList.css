@@ -1,0 +1,46 @@
+#product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#product h2 {
+    margin: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.custom-card {
+    display: flex;
+    width: 80%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.custom-card div {
+    list-style: none;
+    flex: 1 1 auto;
+}
+
+.custom-card div img {
+    height: 250px;
+    width: 250px;
+    border-radius: 4px;
+}
+
+.custom-card div p {
+    margin: 0.5rem 0;
+}
+
+.custom-card label {
+    margin-right: 0.5rem;
+}
+
+.custom-card div button {
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

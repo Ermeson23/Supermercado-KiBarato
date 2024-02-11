@@ -1,0 +1,46 @@
+#cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#cart h2 {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.custom-card {
+    display: flex;
+    width: 80%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.custom-card div {
+    list-style: none;
+    flex: 1 1 auto;
+}
+
+.custom-card div img {
+    height: 250px;
+    width: 250px;
+    border-radius: 4px;
+}
+
+.custom-card div p {
+    margin: 0.5rem 0;
+}
+
+.custom-button {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.clear-cart {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}

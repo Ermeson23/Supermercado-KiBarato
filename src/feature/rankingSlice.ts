@@ -9,6 +9,8 @@ const initialState: RankingState = {
   products: [],
 };
 
+export const getFavoriteProducts = (state: { ranking: RankingState }) => state.ranking.products.filter((product) => product.isFavorite);
+
 const rankingSlice = createSlice({
   name: 'ranking',
   initialState,
@@ -17,11 +19,13 @@ const rankingSlice = createSlice({
       state.products = action.payload;
     },
     toggleFavorite(state, action: PayloadAction<number>) {
-      const product = state.products.find(prod => prod.id === action.payload);
-      if (product) {
-        product.isFavorite = !product.isFavorite;
-      }
-    },
+      state.products = state.products.map(product => {
+        if (product.id === action.payload) {
+          return { ...product, isFavorite: !product.isFavorite };
+        }
+        return product;
+      });
+    }
   },
 });
 
